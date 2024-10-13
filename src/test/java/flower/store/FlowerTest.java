@@ -10,8 +10,8 @@ import org.junit.jupiter.api.Assertions;
 
 public class FlowerTest {
     private static final Random RANDOM_GENERATOR = new Random();
-    final int a = 100;
-    private final int MAX_PRICE = a;
+    final private int a = 100;
+    private final int max_price = a;
     private Flower flower;
 
     @BeforeEach
@@ -21,7 +21,7 @@ public class FlowerTest {
 
     @Test
     public void testPrice() {
-        int price = RANDOM_GENERATOR.nextInt(MAX_PRICE);
+        int price = RANDOM_GENERATOR.nextInt(max_price);
         flower.setPrice(price);
         Assertions.assertEquals(price, flower.getPrice());
     }
@@ -36,23 +36,24 @@ public class FlowerTest {
     @Test
     public void testStore() {
         Flower flower = new Flower();
-        final int b = 100;
-        flower.setPrice(b);
+        final int num = 100;
+        flower.setPrice(num);
         flower.setFlowerType(FlowerType.ROSE);
 
         FlowerBucket flowerBucket = new FlowerBucket();
-        final int c = 5;
-        FlowerPack flowerPack = new FlowerPack(flower, c);
+        final int i = 5;
+        FlowerPack flowerPack = new FlowerPack(flower, i);
         flowerBucket.addFlowerPack(flowerPack);
-        FlowerPack rosePack = new FlowerPack(flower, 10);
+        final int j = 10;
+        FlowerPack rosePack = new FlowerPack(flower, j);
         ArrayList<FlowerPack> arr = new ArrayList<FlowerPack>();
         arr.add(rosePack);
         arr.add(flowerPack);
         Store st = new Store(arr);
         Flower rose = new Flower();
-        rose.setPrice(b);
+        rose.setPrice(num);
         rose.setFlowerType(FlowerType.ROSE);
-        FlowerPack tulipPack = new FlowerPack(rose, c);
+        FlowerPack tulipPack = new FlowerPack(rose, i);
         ArrayList<FlowerPack> res = st.search(tulipPack);
         ArrayList<FlowerPack> arrr = new ArrayList<FlowerPack>();
         arrr.add(flowerPack);

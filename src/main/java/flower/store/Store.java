@@ -2,9 +2,13 @@ package flower.store;
 
 import java.util.ArrayList;
 
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class Store {
-    public static ArrayList<FlowerPack> inventory;
+    private static ArrayList<FlowerPack> inventory;
 
     public Store(ArrayList<FlowerPack> lst) {
         this.inventory = lst;
