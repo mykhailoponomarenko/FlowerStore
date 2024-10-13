@@ -25,6 +25,7 @@ public class Flower {
         this.sepalLength = flower.sepalLength;
     }
 
+    
     public String getColor() {
         return color.getStringRepresentation();
     }
