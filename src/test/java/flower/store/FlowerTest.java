@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Assertions;
 
 public class FlowerTest {
     private static final Random RANDOM_GENERATOR = new Random();
-    final private int aA = 100;
+    private final int aA = 100;
     private final int maxPRICE = aA;
     private Flower flower;
 
