@@ -52,7 +52,7 @@ public class FlowerTest {
         Flower rose = new Flower();
         rose.setPrice(NUM);
         rose.setFlowerType(FlowerType.ROSE);
-        FlowerPack tulipPack = new FlowerPack(rose, J);
+        FlowerPack tulipPack = new FlowerPack(rose, I);
         ArrayList<FlowerPack> res = st.search(tulipPack);
         ArrayList<FlowerPack> arrr = new ArrayList<FlowerPack>();
         arrr.add(flowerPack);
