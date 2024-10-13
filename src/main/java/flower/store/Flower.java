@@ -25,7 +25,7 @@ public class Flower {
         this.sepalLength = flower.sepalLength;
     }
 
-    
+
     public String getColor() {
         return color.getStringRepresentation();
     }
@@ -34,7 +34,8 @@ public class Flower {
     
     public boolean match(Flower f) {
         return this.price == f.getPrice()
-                && this.flowerType.equals(f.getFlowerType()) && this.getSepalLength() == f.getSepalLength();
+                && this.flowerType.equals(f.getFlowerType()) &&
+                this.getSepalLength() == f.getSepalLength();
     }
 
 
