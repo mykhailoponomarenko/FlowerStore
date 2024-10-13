@@ -10,8 +10,8 @@ import org.junit.jupiter.api.Assertions;
 
 public class FlowerTest {
     private static final Random RANDOM_GENERATOR = new Random();
-    final private int A = 100;
-    private final int MAXPRICE = A;
+    final private int aA = 100;
+    private final int maxPRICE = aA;
     private Flower flower;
 
     @BeforeEach
@@ -21,7 +21,7 @@ public class FlowerTest {
 
     @Test
     public void testPrice() {
-        int price = RANDOM_GENERATOR.nextInt(MAXPRICE);
+        int price = RANDOM_GENERATOR.nextInt(maxPRICE);
         flower.setPrice(price);
         Assertions.assertEquals(price, flower.getPrice());
     }
